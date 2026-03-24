@@ -11,6 +11,7 @@ A Retrieval-Augmented Generation (RAG) pipeline built for a construction marketp
 
 ##  Architecture & Design Choices
 
+### 1. Document Chunking & Retrieval
 - **Chunking:** Documents are processed using LangChain's `RecursiveCharacterTextSplitter`. I used a `chunk_size` of 150 characters with an `overlap` of 20 to ensure sentences aren't abruptly cut off, preserving the context of the construction policies.
 - **Vector Indexing:** I used **FAISS** (`IndexFlatL2`) for local vector indexing. It performs a semantic similarity search to retrieve the top *k* most relevant chunks based on the user's query.
 
