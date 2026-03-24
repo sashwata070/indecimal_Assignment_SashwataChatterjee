@@ -1,0 +1,6 @@
+sentence-transformers
+langchain-text-splitters
+faiss-cpu
+gradio
+requests
+numpy
